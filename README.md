@@ -44,9 +44,6 @@ The original scripts remain publicly accessible, and this project does not claim
 ## 💻 Installation & Local Deployment
 
 1. **Clone the repository:**
-## 💻 Installation & Local Deployment
-
-1. **Clone the repository:**
 ```bash
    git clone [https://github.com/WhyCrisis/Tg-Bot-to-MTG-Mods-With-Scripts.git](https://github.com/WhyCrisis/Tg-Bot-to-MTG-Mods-With-Scripts.git)
    cd Tg-Bot-to-MTG-Mods-With-Scripts
