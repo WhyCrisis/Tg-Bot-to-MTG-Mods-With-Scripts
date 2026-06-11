@@ -38,8 +38,20 @@ def main_butons():
             [InlineKeyboardButton(text='Библиотеки',callback_data ='libs')],
             [InlineKeyboardButton(text='Гайды', callback_data='Guides')],
             [InlineKeyboardButton(text='Наш чат', url='https://discord.gg/qBPEYjfNhv' )],
-            [InlineKeyboardButton(text='Связаться с разработчиком', url='https://t.me/mtg_mods')]
+            [InlineKeyboardButton(text='Связаться с разработчиком', url='https://t.me/mtg_mods')],
+            [InlineKeyboardButton(text='Ресурсы MTG MODS', callback_data='mtg_mods_info')]
          ],
+    )
+    return keyboard
+
+def choose_script():
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text='Старые хелперы (заброшены ⚠️)', callback_data='mtg_mods_abandoned')],
+            [InlineKeyboardButton(text='Текущие скрипты', callback_data='mtg_mods_actual')],
+            [InlineKeyboardButton(text='Библиотеки для установки скриптов', callback_data='mtg_mods_libs')]
+
+        ],
     )
     return keyboard
 
