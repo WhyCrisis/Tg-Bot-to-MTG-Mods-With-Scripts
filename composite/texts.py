@@ -10,9 +10,20 @@ from aiogram.types import (Message,ReplyKeyboardMarkup,
 from aiogram.types import ReplyKeyboardRemove
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-from composite.keyboards import choose_script
+from composite.keyboards import choose_script, choose_libs
 
 router = Router()
+
+@router.callback_query(F.data == 'scripts')
+async def scripts_menu_da(callback: CallbackQuery):
+    await callback.answer()
+    await scripts_menu(callback.message)
+
+
+@router.callback_query(F.data == 'mtg_mods_libs')
+async def libs_scripts(callback: CallbackQuery):
+    await callback.answer()
+    await libs_menu_choose(callback.message)
 
 async def scripts_menu(message: Message):
     await message.answer(
@@ -29,7 +40,11 @@ async def scripts_menu(message: Message):
         reply_markup = choose_script())
 
 
-@router.callback_query(F.data == 'scripts')
-async def scripts_menu_da(callback: CallbackQuery):
-    await callback.answer()
-    await scripts_menu(callback.message)
+async def libs_menu_choose(message: Message):
+    await message.answer(
+        text=(
+        '<b>Выбор нужной библиотеки под вашe устройство:</b>\n\n'
+        '⚠️ <b>Важно:</b> выбирайте библиотеку для вашего устройства внимательно и устанавливайте ее строго по гайду!\n\n'
+        ),
+        parse_mode ='HTML',
+        reply_markup = choose_libs())
