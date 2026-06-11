@@ -10,5 +10,26 @@ from aiogram.types import (Message,ReplyKeyboardMarkup,
 from aiogram.types import ReplyKeyboardRemove
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+from composite.keyboards import choose_script
+
 router = Router()
 
+async def scripts_menu(message: Message):
+    await message.answer(
+        text=(
+        "<b>📂 Меню скриптов</b>\n\n"
+        "Выберите интересующий вас раздел из списка ниже:\n\n"
+        "⚠️ <b>Важно:</b> скрипты требуют наличия установленных библиотек <code>Moonloader</code> или <code>Monetloader</code>.\n\n"
+        "📖 <b>Гайды:</b> Если не знаете, как устанавливать — откройте раздел «Библиотеки», там есть подробная инструкция.\n\n"
+        "💡 <b>Совет:</b> изучайте функционал скриптов поэтапно в карточках товаров.\n\n"
+        "🛠 <b>Поддержка:</b> по всем вопросам обновления и помощи пишите "
+        "<a href='https://t.me/mtg_mods'>Разработчику</a>."
+        ),
+        parse_mode ='HTML',
+        reply_markup = choose_script())
+
+
+@router.callback_query(F.data == 'scripts')
+async def scripts_menu_da(callback: CallbackQuery):
+    await callback.answer()
+    await scripts_menu(callback.message)
