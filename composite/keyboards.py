@@ -1,5 +1,5 @@
 from aiogram import Router, F
-from aiogram.filters import Command
+from aiogram.filters import Command, callback_data
 from aiogram.types import (Message,ReplyKeyboardMarkup,
                            KeyboardButton,
                            InlineKeyboardButton,
@@ -55,3 +55,13 @@ def choose_script():
     )
     return keyboard
 
+def choose_libs():
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text='MonetLoader (Arizona Mobile / Установка MTG Скриптов)', callback_data='arizona_mobile_mtg_libs')],
+            [InlineKeyboardButton(text='MonetLoader (Arizona Mobile / Установка ЛЮБЫХ Скриптов)', callback_data='arizona_mobile_libs')],
+            [InlineKeyboardButton(text='MoonLoader (ПК)', callback_data='moonloader_lib')],
+            [InlineKeyboardButton(text='Родина Мобайл', callback_data='rodina_mobile_libs')]
+        ],
+    )
+    return keyboard
