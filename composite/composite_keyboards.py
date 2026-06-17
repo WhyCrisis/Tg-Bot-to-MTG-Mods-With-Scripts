@@ -35,7 +35,7 @@ def main_butons():
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="Скачать скрипт", callback_data='scripts')],
-            [InlineKeyboardButton(text='Библиотеки',callback_data ='libs')],
+            [InlineKeyboardButton(text='Библиотеки',callback_data ='mtg_mods_libs')],
             [InlineKeyboardButton(text='Гайды', callback_data='Guides')],
             [InlineKeyboardButton(text='Наш чат', url='https://discord.gg/qBPEYjfNhv' )],
             [InlineKeyboardButton(text='Связаться с разработчиком', url='https://t.me/mtg_mods')],
