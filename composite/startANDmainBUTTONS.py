@@ -1,5 +1,7 @@
-
+#---
+from composite.texts_main import *
 from composite.keyboards import *
+#---
 
 router = Router()
 
@@ -45,5 +47,13 @@ async def main_menu(message: Message):
 @router.callback_query(F.data == 'activate_bot')
 async def activate_bot(callback: CallbackQuery):
     await callback.answer()
-    await callback.message.delete()
+    await main_menu(callback.message)
+
+@router.callback_query(F.data == 'back_choose')
+async def back_choose(callback: CallbackQuery):
+    await callback.answer()
+    await scripts_menu (callback.message)
+
+@router.callback_query(F.data == 'back_start')
+async def back_startss(callback: CallbackQuery):
     await main_menu(callback.message)
