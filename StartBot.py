@@ -11,9 +11,11 @@ from dotenv import load_dotenv
 #---
 
 #---
-from composite.startANDmainBUTTONS import router as start_router
-from composite.keyboards import router as keyboards_router
-from composite.texts_main import router as text_router
+from composite.composite_buttons import router as start_router
+from composite.composite_keyboards import router as keyboards_router
+from composite.texts_composite import router as text_router
+from libs_router.libs_text import router as libs_text
+from libs_router.libs_choosing import router as choosing_libs
 
 
 
@@ -30,7 +32,8 @@ dp = Dispatcher()
 dp.include_router(text_router)
 dp.include_router(keyboards_router)
 dp.include_router(start_router)
-
+dp.include_router(libs_text)
+dp.include_router(choosing_libs)
 #---
 
 #---инициализация

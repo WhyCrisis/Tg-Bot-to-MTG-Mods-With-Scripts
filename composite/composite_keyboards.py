@@ -67,3 +67,14 @@ def choose_libs():
         ],
     )
     return keyboard
+
+def download_mtg_libs():
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text='Скачать библиотеку х32 (для старых устройств)', url='Https://github.com/MTGMODS/arz_monetloader/releases/download/v17.2.5/MonetLoader-v17.2.5.apk')],
+            [InlineKeyboardButton(text='Скачать библиотеку х64 (для новых устройств)', url='Https://github.com/MTGMODS/arz_monetloader/releases/download/v17.2.5/MonetLoader-v17.2.5.apk')],
+            [InlineKeyboardButton(text='Вернутся назад', callback_data='back_choose')]
+
+        ],
+    )
+    return keyboard
