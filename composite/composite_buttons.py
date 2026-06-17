@@ -1,6 +1,6 @@
 #---
-from composite.texts_main import *
-from composite.keyboards import *
+from composite.texts_composite import *
+from composite.composite_keyboards import *
 #---
 
 router = Router()
