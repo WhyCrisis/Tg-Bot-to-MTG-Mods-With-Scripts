@@ -10,7 +10,7 @@ from aiogram.types import (Message,ReplyKeyboardMarkup,
 from aiogram.types import ReplyKeyboardRemove
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-from composite.keyboards import choose_script, choose_libs
+from composite.composite_keyboards import choose_script, choose_libs
 
 router = Router()
 
