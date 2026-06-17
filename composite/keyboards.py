@@ -49,7 +49,8 @@ def choose_script():
         inline_keyboard=[
             [InlineKeyboardButton(text='Старые хелперы (заброшены ⚠️)', callback_data='mtg_mods_abandoned')],
             [InlineKeyboardButton(text='Текущие скрипты', callback_data='mtg_mods_actual')],
-            [InlineKeyboardButton(text='Библиотеки для установки скриптов', callback_data='mtg_mods_libs')]
+            [InlineKeyboardButton(text='Библиотеки для установки скриптов', callback_data='mtg_mods_libs')],
+            [InlineKeyboardButton(text='Вернутся на главное меню', callback_data='back_start')]
 
         ],
     )
@@ -61,7 +62,8 @@ def choose_libs():
             [InlineKeyboardButton(text='MonetLoader (Arizona Mobile / Установка MTG Скриптов)', callback_data='arizona_mobile_mtg_libs')],
             [InlineKeyboardButton(text='MonetLoader (Arizona Mobile / Установка ЛЮБЫХ Скриптов)', callback_data='arizona_mobile_libs')],
             [InlineKeyboardButton(text='MoonLoader (ПК)', callback_data='moonloader_lib')],
-            [InlineKeyboardButton(text='Родина Мобайл', callback_data='rodina_mobile_libs')]
+            [InlineKeyboardButton(text='Родина Мобайл', callback_data='rodina_mobile_libs')],
+            [InlineKeyboardButton(text='Вернутся назад', callback_data='back_choose')]
         ],
     )
     return keyboard
