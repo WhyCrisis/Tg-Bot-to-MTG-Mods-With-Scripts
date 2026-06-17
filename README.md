@@ -17,6 +17,16 @@ Bohdan didn't reply. Instead of letting a great development opportunity fade due
 The original scripts remain publicly accessible, and this project does not claim ownership over them. This bot serves as a custom interface wrapper to maximize utility and ease of use. If any script author explicitly requests the removal of their work, it will be complied with immediately. Until then: **I build, I learn, and I publish.**
 
 ---
+## Screens from MVP bot
+<img width="292" height="718" alt="image" src="https://github.com/user-attachments/assets/085fa245-5516-4686-a04b-ffd3c5d06443" />
+<img width="580" height="394" alt="image" src="https://github.com/user-attachments/assets/33b1159f-1206-474f-ae07-3c22cb6d78fe" />
+<img width="577" height="196" alt="image" src="https://github.com/user-attachments/assets/12b773e8-514d-4aff-a893-050ab052ea8f" />
+
+
+
+
+
+---
 
 ## 🚀 Key Features
 
@@ -40,6 +50,8 @@ The original scripts remain publicly accessible, and this project does not claim
 
 * **Core Interface & Bot Architecture**: Developed independently by **WhyCrisis**.
 * **Automation Content & Original Scripts**: All credits for the foundational scripts, configurations, and core logic belong entirely to the original creator and the [MTGMODS](https://github.com/MTGMODS) repository ecosystem.
+
+---  
 
 ## 💻 Installation & Local Deployment
 
